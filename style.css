@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.4;
+    word-spacing: 1.2;
+    
+}
+button{
+    font-size: 1rem;
+    margin: 20px;
+    padding: 5px 15px;
+}
+
+.toastBox{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.toast{
+    box-shadow: 0 0 20px grey;
+    padding: 5px;
+    padding-right: 30px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.toast::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    /* background-color: green; */
+    animation: anim 5s linear forwards;
+}
+@keyframes anim {
+    100%{width: 0;}
+}
+
+
+
+.toast-success::after{
+    background-color: green;
+}
+.toast-invalid::after{
+    background-color: yellow;
+}
+.toast-error::after{
+    background-color: red;
+}
+.toast-success i{
+    color: green;
+}
+.toast-invalid i{
+    color: yellow;
+}
+.toast-error i{
+    color: red;
+}
+
+
