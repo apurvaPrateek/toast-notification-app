@@ -28,6 +28,14 @@ button{
     margin-top: 10px;
     font-size: 1.2rem;
     position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft {
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 .toast::after{
